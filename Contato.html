@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    header {
+      width: 100%;
+      max-width: 1000px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4CAF50;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #388E3C;
+    }
+
+    .contato {
+      background-color: #fff;
+      width: 100%;
+      max-width: 800px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .logo {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      height: 3rem;
+      width: auto;
+    }
+
+    .titulo {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-top: 2.5rem;
+    }
+
+    .decorativo {
+      height: 10px;
+      background-color: #ddd;
+      border-radius: 5px;
+      margin: 1.5rem 0;
+    }
+
+    .descricao {
+      font-size: 1.125rem;
+      color: #555;
+      line-height: 1.8;
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+    }
+
+    .imagem-central {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      margin: 0 auto 2rem auto;
+      display: block;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .voltar {
+      background-color: #4CAF50;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .voltar:hover {
+      background-color: #45a049;
+      transform: translateY(-2px);
+    }
+
+    .voltar:focus {
+      outline: none;
+      box-shadow: 0 0 10px rgba(72, 165, 72, 0.7);
+    }
+
+    @media (max-width: 768px) {
+      .titulo {
+        font-size: 1.5rem;
+      }
+
+      .descricao {
+        font-size: 1rem;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .logo {
+        height: 2.5rem;
+      }
+
+      .voltar {
+        font-size: 0.95rem;
+        padding: 0.6rem 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .titulo {
+        font-size: 1.25rem;
+      }
+
+      .descricao {
+        font-size: 0.95rem;
+      }
+
+      .imagem-central {
+        width: 90%;
+      }
+
+      .voltar {
+        width: 100%;
+        padding: 0.8rem;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .descricao {
+        font-size: 0.85rem;
+      }
+
+      .titulo {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho com logo e navegação -->
+  <header>
+    <img src="image-120.png" alt="Logo do Aplicativo">
+    <nav>
+      <a href="Cadastrar.html">Perfil</a>
+      <a href="Home.html">Home</a>
+      <a href="IA.html">Cursos</a>
+      <a href="lp.html">Notícias</a>
+      <a href="Contato.html">Contato</a>
+      <a href="Configuracao.html">Status</a>
+    </nav>
+  </header>
+
+  <div class="contato">
+    <div class="titulo">Contato</div>
+    <div class="decorativo"></div>
+
+    <div class="descricao">
+      Estamos aqui para ajudar! Se você tem dúvidas sobre as cerimônias de formatura, precisa de informações adicionais sobre os cursos ou quer compartilhar sua história de sucesso, nossa equipe está pronta para atendê-lo.
+    </div>
+
+    <img class="imagem-central" src="image-170.png" alt="Imagem de Contato">
+
+    <button class="voltar" onclick="window.history.back();">Voltar</button>
+  </div>
+
+</body>
+</html>

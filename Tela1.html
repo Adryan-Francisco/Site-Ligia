@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de Tecnologia da Informação</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 20px;
+    }
+
+    header {
+      max-width: 1000px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #4CAF50;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #388E3C;
+    }
+
+    .container {
+      background-color: #fff;
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      color: #222;
+      margin-bottom: 1rem;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .section h2 {
+      font-size: 1.3rem;
+      color: #4CAF50;
+      margin-bottom: 0.5rem;
+      border-bottom: 2px solid #4CAF50;
+      padding-bottom: 5px;
+    }
+
+    .section p, .section ul {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .section ul {
+      padding-left: 1.5rem;
+      list-style: disc;
+    }
+
+    .image {
+      width: 100%;
+      border-radius: 10px;
+      margin: 1rem 0;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .back-button {
+      display: block;
+      width: 100%;
+      max-width: 200px;
+      margin: 0 auto;
+      padding: 0.75rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #45a049;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .section h2 {
+        font-size: 1.1rem;
+      }
+
+      .section p, .section ul {
+        font-size: 0.95rem;
+      }
+
+      .back-button {
+        font-size: 0.95rem;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Cabeçalho com logo e navegação -->
+  <header>
+    <img src="image-120.png" alt="Logo do Aplicativo">
+    <nav>
+      <a href="Cadastrar.html">Perfil</a>
+      <a href="Home.html">Home</a>
+      <a href="IA.html">Cursos</a>
+      <a href="lp.html">Notícias</a>
+      <a href="Contato.html">Contato</a>
+      <a href="Configuracao.html">Status</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Curso de Tecnologia da Informação</h1>
+
+    <div class="section">
+      <h2>Sobre o Curso</h2>
+      <p>
+        O curso de Tecnologia da Informação (TI) oferece uma base sólida sobre como os sistemas computacionais funcionam e como são utilizados para otimizar processos e soluções no mundo moderno. É ideal para quem deseja atuar no setor tecnológico com uma visão estratégica e prática.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Requisitos</h2>
+      <ul>
+        <li>Noções básicas de informática</li>
+        <li>Interesse por tecnologia e sistemas</li>
+        <li>Capacidade de resolver problemas de forma lógica</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>O que você vai aprender</h2>
+      <ul>
+        <li>Fundamentos da computação e redes</li>
+        <li>Sistemas operacionais e hardware</li>
+        <li>Gestão e segurança da informação</li>
+        <li>Introdução a banco de dados e programação</li>
+        <li>Infraestrutura e suporte técnico</li>
+      </ul>
+    </div>
+
+    <a class="back-button" href="javascript:history.back()">← Voltar</a>
+  </div>
+</body>
+</html>
