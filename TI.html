@@ -182,5 +182,76 @@
 
     <a class="back-button" href="javascript:history.back()">← Voltar</a>
   </div>
+  <!-- Menu Acessibilidade -->
+  <div id="accessibility-menu" role="region" aria-label="Menu de acessibilidade" tabindex="0">
+    <button id="increase-font" aria-label="Aumentar tamanho da fonte">A+</button>
+    <button id="decrease-font" aria-label="Diminuir tamanho da fonte">A-</button>
+    <button id="reset-font" aria-label="Restaurar tamanho da fonte padrão">Reset</button>
+    <button id="toggle-contrast" aria-label="Alternar alto contraste">Contraste</button>
+    <button id="toggle-darkmode" aria-label="Alternar modo escuro">Modo Escuro</button>
+  </div>
+
+  <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <script>
+    let fontSize = 16; // tamanho padrão em px
+    const minFontSize = 12;
+    const maxFontSize = 30;
+
+    function updateFontSize() {
+      document.documentElement.style.fontSize = fontSize + 'px';
+    }
+
+    document.getElementById('increase-font').addEventListener('click', () => {
+      if(fontSize < maxFontSize) {
+        fontSize++;
+        updateFontSize();
+      }
+    });
+
+    document.getElementById('decrease-font').addEventListener('click', () => {
+      if(fontSize > minFontSize) {
+        fontSize--;
+        updateFontSize();
+      }
+    });
+
+    document.getElementById('reset-font').addEventListener('click', () => {
+      fontSize = 16;
+      updateFontSize();
+    });
+
+    document.getElementById('toggle-contrast').addEventListener('click', () => {
+      document.body.classList.toggle('high-contrast');
+    });
+
+    document.getElementById('toggle-darkmode').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+
+    const backToTopBtn = document.getElementById('back-to-top');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
