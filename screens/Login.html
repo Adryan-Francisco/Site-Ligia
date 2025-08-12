@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Plataforma de Cursos</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="form-page">
+
+  <main class="form-container">
+    <form id="login-form" novalidate>
+      <div class="form-header">
+        <img src="../img/image-110.png" alt="Logotipo da plataforma" class="form-logo">
+        <h1>Acesse sua Conta</h1>
+        <p>Que bom ter você de volta!</p>
+      </div>
+
+      <div class="form-group">
+        <label for="username">Nome de Usuário</label>
+        <input type="text" id="username" name="username" placeholder="Digite seu usuário" required autocomplete="username">
+        <span class="error-message" aria-live="polite"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" placeholder="Digite sua senha" required autocomplete="current-password">
+        <span class="error-message" aria-live="polite"></span>
+      </div>
+
+      <button type="submit" class="button-primary">Entrar</button>
+
+      <div class="form-footer">
+        <p>Não possui uma conta? <a href="Cadastrar.html">Crie uma agora!</a></p>
+      </div>
+    </form>
+  </main>
+
+  <div id="accessibility-menu" role="toolbar" aria-label="Menu de acessibilidade">
+    <button id="increase-font" aria-label="Aumentar tamanho da fonte">A+</button>
+    <button id="decrease-font" aria-label="Diminuir tamanho da fonte">A-</button>
+    <button id="reset-font" aria-label="Restaurar tamanho da fonte padrão">A=</button>
+    <button id="toggle-darkmode" aria-label="Alternar modo escuro">Modo Escuro</button>
+    <button id="toggle-contrast" aria-label="Alternar alto contraste">Contraste</button>
+  </div>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <script src="../js/login.js" defer></script>
+</body>
+</html>

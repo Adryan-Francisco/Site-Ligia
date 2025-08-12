@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plataforma de Cursos | Inovação e Tecnologia</title>
+    <meta name="description" content="Descubra cursos sobre tecnologias emergentes como Inteligência Artificial, TI e Programação. Prepare-se para o futuro conosco.">
+    
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <img src="../img/image-120.png" alt="Logo da Plataforma de Cursos" />
+      <nav aria-label="Navegação principal">
+        <ul>
+          <li><a href="Cadastrar.html">Perfil</a></li>
+          <li><a href="Home.html" class="active">Home</a></li>
+          <li><a href="IA.html">Cursos</a></li>
+          <li><a href="lp.html">Notícias</a></li>
+          <li><a href="Contato.html">Contato</a></li>
+          <li><a href="Configuracao.html">Status</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="welcome-section" aria-labelledby="welcome-heading">
+      <div class="container">
+        <h1 id="welcome-heading">Bem-Vindo à Nossa Plataforma de Cursos!</h1>
+        <p>Descubra cursos sobre tecnologias emergentes e prepare-se para o futuro.</p>
+      </div>
+    </section>
+
+    <section class="courses-section" aria-labelledby="courses-heading">
+      <div class="container">
+        <h2 id="courses-heading" class="sr-only">Cursos em Destaque</h2>
+        <div class="courses-grid">
+          <article class="card">
+            <img src="../img/image-130.png" alt="Ilustração abstrata de um cérebro digital." />
+            <div class="card-content">
+              <h3><a href="TI.html">Tecnologia da Informação</a></h3>
+              <p>Explore o mundo da TI e entenda sua importância no mercado de trabalho.</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="../img/image-20.png" alt="Robô humanoide interagindo com gráficos digitais." />
+            <div class="card-content">
+              <h3><a href="IA.html">Inteligência Artificial</a></h3>
+              <p>Aprenda como a IA está transformando a indústria e o nosso dia a dia.</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="../img/image-30.png" alt="Tela de computador exibindo linhas de código." />
+            <div class="card-content">
+              <h3><a href="lp.html">Linguagens de Programação</a></h3>
+              <p>Entenda as bases da programação e domine as principais linguagens.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="navigation-links">
+      <div class="container">
+        <a href="Novidades.html">Ver Mais Cursos</a>
+        <a href="Tela1.html">Leia as Notícias</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Plataforma de Cursos. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"></path>
+    </svg>
+  </button>
+
+  <div id="accessibility-menu" role="toolbar" aria-label="Menu de acessibilidade">
+    <button id="increase-font" aria-label="Aumentar tamanho da fonte">A+</button>
+    <button id="decrease-font" aria-label="Diminuir tamanho da fonte">A-</button>
+    <button id="reset-font" aria-label="Restaurar tamanho da fonte padrão">A=</button>
+    <button id="toggle-darkmode" aria-label="Alternar modo escuro">Modo Escuro</button>
+    <button id="toggle-contrast" aria-label="Alternar alto contraste">Contraste</button>
+  </div>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>
