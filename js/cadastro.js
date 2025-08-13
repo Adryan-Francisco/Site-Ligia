@@ -33,7 +33,27 @@ document.addEventListener('DOMContentLoaded', () => {
     input.classList.remove('error');
     errorDisplay.textContent = '';
   }
+  /**
+   * Inicializa o botão "Voltar ao Topo".
+   */
+  function initBackToTop() {
+    if (!backToTopBtn) return;
 
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
   /**
    * Valida o formulário inteiro.
    * @returns {boolean} Retorna true se o formulário for válido, senão false.

@@ -478,3 +478,210 @@ img {
 .form-footer a:hover {
   text-decoration: underline;
 }
+/* --- ADICIONAR AO SEU style.css --- */
+
+/* ---------------------------------- */
+/* 7. PÁGINA DE CONFIGURAÇÕES/DASHBOARD */
+/* ---------------------------------- */
+
+.user-dashboard {
+  padding: var(--spacing-xl) 0;
+}
+
+.user-dashboard .container {
+  max-width: 900px;
+  background-color: var(--color-surface);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.user-dashboard h1 {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  font-size: 2rem;
+  color: var(--color-text);
+}
+
+.dashboard-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.dashboard-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--color-primary);
+  color: var(--color-text);
+}
+
+.info-box {
+  background-color: var(--color-background);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+}
+
+.info-box p {
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.1rem;
+}
+.info-box p:last-child {
+  margin-bottom: 0;
+}
+
+.status-active {
+  color: var(--color-primary-dark);
+  font-weight: bold;
+}
+
+.course-list {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.course-list li {
+  font-size: 1.1rem;
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px dashed var(--color-border);
+}
+.course-list li:last-child {
+  border-bottom: none;
+}
+
+/* Botão Secundário (para ações como "Voltar") */
+.button-secondary {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #008CBA; /* Um azul para diferenciar */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: var(--spacing-lg);
+}
+.button-secondary:hover {
+  background-color: #007B9E;
+  color: white;
+}
+/* --- ADICIONAR AO SEU style.css --- */
+
+/* ---------------------------------- */
+/* 8. PÁGINA DE CONTATO/INFORMAÇÃO    */
+/* ---------------------------------- */
+
+.contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-xl) var(--spacing-md);
+  width: 100%;
+}
+
+.contact-card {
+  width: 100%;
+  max-width: 800px;
+  padding: var(--spacing-xl);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.contact-card h1 {
+  font-size: 2.5rem;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  /* Efeito decorativo substituindo o div */
+  border-bottom: 3px solid var(--color-primary); 
+  display: inline-block; /* Faz a borda se ajustar ao tamanho do texto */
+}
+
+.contact-card .description {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  max-width: 650px;
+  margin: 0 auto var(--spacing-xl) auto;
+}
+
+.contact-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: var(--border-radius);
+  margin: 0 auto var(--spacing-xl) auto;
+  display: block;
+}
+
+/* O .button-primary já está estilizado, então o botão "Voltar" funcionará perfeitamente */
+
+/* Media queries para a página de contato */
+@media (max-width: 768px) {
+  .contact-card h1 {
+    font-size: 2rem;
+  }
+  .contact-card .description {
+    font-size: 1rem;
+  }
+}
+/* --- ADICIONAR AO SEU style.css --- */
+
+/* ---------------------------------- */
+/* 9. PÁGINA DE DETALHES DO CURSO     */
+/* ---------------------------------- */
+
+.course-details-container {
+  width: 100%;
+  max-width: 900px;
+  margin: var(--spacing-lg) auto;
+  padding: var(--spacing-xl);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
+}
+
+.course-details-container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-xl);
+}
+
+.course-details-container section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.course-details-container h2 {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  padding-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.course-details-container p,
+.course-details-container ul {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+.course-details-container ul {
+  padding-left: var(--spacing-lg);
+  list-style-type: '✔ '; /* Adiciona um marcador de check-in moderno */
+}
+
+/* O .button-secondary já foi definido na melhoria da página de Configurações */
+/* Ele será reutilizado aqui perfeitamente */
+.course-details-container .button-secondary {
+    max-width: 250px;
+    margin: var(--spacing-lg) auto 0 auto;
+}

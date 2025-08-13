@@ -1,242 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Curso de Inteligência Artificial</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    body {
-      background-color: #f4f4f4;
-      color: #333;
-      padding: 20px;
-    }
-
-    header {
-      max-width: 1000px;
-      margin: 0 auto 20px auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    header img {
-      height: 50px;
-    }
-
-    nav a {
-      margin-left: 15px;
-      text-decoration: none;
-      color: #4CAF50;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #388E3C;
-    }
-
-    .container {
-      background-color: #fff;
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 2rem;
-      color: #222;
-      margin-bottom: 1rem;
-    }
-
-    .section {
-      margin-bottom: 2rem;
-    }
-
-    .section h2 {
-      font-size: 1.3rem;
-      color: #4CAF50;
-      margin-bottom: 0.5rem;
-      border-bottom: 2px solid #4CAF50;
-      padding-bottom: 5px;
-    }
-
-    .section p, .section ul {
-      font-size: 1rem;
-      color: #555;
-      line-height: 1.6;
-    }
-
-    .section ul {
-      padding-left: 1.5rem;
-      list-style: disc;
-    }
-
-    .image {
-      width: 100%;
-      border-radius: 10px;
-      margin: 1rem 0;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .back-button {
-      display: block;
-      width: 100%;
-      max-width: 200px;
-      margin: 0 auto;
-      padding: 0.75rem;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-      text-align: center;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-
-    .back-button:hover {
-      background-color: #45a049;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      .section h2 {
-        font-size: 1.1rem;
-      }
-
-      .section p, .section ul {
-        font-size: 0.95rem;
-      }
-
-      .back-button {
-        font-size: 0.95rem;
-      }
-
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      .section h2 {
-        font-size: 1.1rem;
-      }
-
-      .section p,
-      .section ul {
-        font-size: 0.95rem;
-      }
-
-      .back-button {
-        font-size: 0.95rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso de Inteligência Artificial | Plataforma de Cursos</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
-  <!-- Cabeçalho com logo e navegação -->
-  <header>
-    <img src="image-120.png" alt="Logo do Aplicativo">
-    <nav>
-      <a href="Cadastrar.html">Perfil</a>
-      <a href="Home.html">Home</a>
-      <a href="IA.html">Cursos</a>
-      <a href="lp.html">Notícias</a>
-      <a href="Contato.html">Contato</a>
-      <a href="Configuracao.html">Status</a>
-    </nav>
+
+  <header class="site-header">
+    <div class="container">
+      <img src="../img/image-120.png" alt="Logo da Plataforma de Cursos" />
+      <nav aria-label="Navegação principal">
+        <ul>
+          <li><a href="Cadastrar.html">Perfil</a></li>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="IA.html" class="active">Cursos</a></li>
+          <li><a href="TI.html">Notícias</a></li>
+          <li><a href="Contato.html">Contato</a></li>
+          <li><a href="Configuracao.html">Status</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <div class="container">
-    <h1>Curso de Inteligência Artificial</h1>
+  <main>
+    <article class="course-details-container">
+      <h1>Curso de Inteligência Artificial</h1>
 
-    <div class="section">
-      <h2>Sobre o Curso</h2>
-      <p>
-        A Inteligência Artificial (IA) está revolucionando o mundo! Neste curso, você aprenderá como as máquinas conseguem simular a inteligência humana para tomar decisões, resolver problemas e aprender com dados. Ideal para quem quer se preparar para o futuro do mercado de trabalho.
-      </p>
-    </div>
+      <section aria-labelledby="about-course-heading">
+        <h2 id="about-course-heading">Sobre o Curso</h2>
+        <p>
+          A Inteligência Artificial (IA) está revolucionando o mundo! Neste curso, você aprenderá como as máquinas conseguem simular a inteligência humana para tomar decisões, resolver problemas e aprender com dados. Ideal para quem quer se preparar para o futuro do mercado de trabalho.
+        </p>
+      </section>
 
-    <div class="section">
-      <h2>Requisitos</h2>
-      <ul>
-        <li>Conhecimentos básicos de informática</li>
-        <li>Noções de lógica de programação (desejável)</li>
-        <li>Curiosidade sobre tecnologia e inovação</li>
-      </ul>
-    </div>
+      <section aria-labelledby="requirements-heading">
+        <h2 id="requirements-heading">Requisitos</h2>
+        <ul>
+          <li>Conhecimentos básicos de informática</li>
+          <li>Noções de lógica de programação (desejável)</li>
+          <li>Curiosidade sobre tecnologia e inovação</li>
+        </ul>
+      </section>
 
-    <div class="section">
-      <h2>O que você vai aprender</h2>
-      <ul>
-        <li>O que é Inteligência Artificial e como ela funciona</li>
-        <li>Conceitos de aprendizado de máquina (machine learning)</li>
-        <li>Introdução à análise de dados e algoritmos</li>
-        <li>Aplicações reais da IA no mercado</li>
-        <li>Ferramentas e linguagens usadas na IA</li>
-      </ul>
-    </div>
+      <section aria-labelledby="learning-objectives-heading">
+        <h2 id="learning-objectives-heading">O que você vai aprender</h2>
+        <ul>
+          <li>O que é Inteligência Artificial e como ela funciona</li>
+          <li>Conceitos de aprendizado de máquina (machine learning)</li>
+          <li>Introdução à análise de dados e algoritmos</li>
+          <li>Aplicações reais da IA no mercado</li>
+          <li>Ferramentas e linguagens usadas na IA</li>
+        </ul>
+      </section>
 
-    <div class="section">
-      <h2>Benefícios do Curso</h2>
-      <ul>
-        <li>Conteúdo atualizado com as tendências do mercado</li>
-        <li>Aprendizado prático com projetos e desafios reais</li>
-        <li>Mentoria com especialistas da área</li>
-        <li>Acesso a uma comunidade exclusiva de alunos</li>
-      </ul>
-    </div>
+      <section aria-labelledby="benefits-heading">
+        <h2 id="benefits-heading">Benefícios do Curso</h2>
+        <ul>
+          <li>Conteúdo atualizado com as tendências do mercado</li>
+          <li>Aprendizado prático com projetos e desafios reais</li>
+          <li>Mentoria com especialistas da área</li>
+          <li>Acesso a uma comunidade exclusiva de alunos</li>
+        </ul>
+      </section>
 
-    <div class="section">
-      <h2>Áreas de Atuação</h2>
-      <p>
-        Ao concluir o curso, você poderá atuar como desenvolvedor de IA, cientista de dados, analista de sistemas inteligentes, engenheiro de aprendizado de máquina, entre outras posições nas áreas de tecnologia, saúde, finanças, indústria e marketing.
-      </p>
-    </div>
+      <section aria-labelledby="career-paths-heading">
+        <h2 id="career-paths-heading">Áreas de Atuação</h2>
+        <p>
+          Ao concluir o curso, você poderá atuar como desenvolvedor de IA, cientista de dados, analista de sistemas inteligentes, engenheiro de aprendizado de máquina, entre outras posições nas áreas de tecnologia, saúde, finanças, indústria e marketing.
+        </p>
+      </section>
 
-    <div class="section">
-      <h2>Certificação</h2>
-      <p>
-        Ao final do curso, você receberá um certificado reconhecido pelo mercado, que comprova sua capacitação e pode ser incluído em seu currículo e perfil no LinkedIn.
-      </p>
-    </div>
+      <section aria-labelledby="certification-heading">
+        <h2 id="certification-heading">Certificação</h2>
+        <p>
+          Ao final do curso, você receberá um certificado reconhecido pelo mercado, que comprova sua capacitação e pode ser incluído em seu currículo e perfil no LinkedIn.
+        </p>
+      </section>
 
-   
+      <button id="back-button" class="button-secondary">← Voltar</button>
+    </article>
+  </main>
 
-    <a class="back-button" href="javascript:history.back()">← Voltar</a>
-  </div>
- <!-- Menu Acessibilidade -->
-  <div id="accessibility-menu" role="region" aria-label="Menu de acessibilidade" tabindex="0">
+  <div id="accessibility-menu" role="toolbar" aria-label="Menu de acessibilidade">
     <button id="increase-font" aria-label="Aumentar tamanho da fonte">A+</button>
     <button id="decrease-font" aria-label="Diminuir tamanho da fonte">A-</button>
-    <button id="reset-font" aria-label="Restaurar tamanho da fonte padrão">Reset</button>
-    <button id="toggle-contrast" aria-label="Alternar alto contraste">Contraste</button>
+    <button id="reset-font" aria-label="Restaurar tamanho da fonte padrão">A=</button>
     <button id="toggle-darkmode" aria-label="Alternar modo escuro">Modo Escuro</button>
+    <button id="toggle-contrast" aria-label="Alternar alto contraste">Contraste</button>
   </div>
 
-  <!-- VLibras -->
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
@@ -248,55 +103,6 @@
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
 
-  <script>
-    let fontSize = 16; // tamanho padrão em px
-    const minFontSize = 12;
-    const maxFontSize = 30;
-
-    function updateFontSize() {
-      document.documentElement.style.fontSize = fontSize + 'px';
-    }
-
-    document.getElementById('increase-font').addEventListener('click', () => {
-      if(fontSize < maxFontSize) {
-        fontSize++;
-        updateFontSize();
-      }
-    });
-
-    document.getElementById('decrease-font').addEventListener('click', () => {
-      if(fontSize > minFontSize) {
-        fontSize--;
-        updateFontSize();
-      }
-    });
-
-    document.getElementById('reset-font').addEventListener('click', () => {
-      fontSize = 16;
-      updateFontSize();
-    });
-
-    document.getElementById('toggle-contrast').addEventListener('click', () => {
-      document.body.classList.toggle('high-contrast');
-    });
-
-    document.getElementById('toggle-darkmode').addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-    });
-
-    const backToTopBtn = document.getElementById('back-to-top');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTopBtn.classList.add('show');
-      } else {
-        backToTopBtn.classList.remove('show');
-      }
-    });
-
-    backToTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
+  <script src="../js/ia.js" defer></script>
 </body>
 </html>

@@ -1,221 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contato</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      border: 0;
-      font-family: 'Arial', sans-serif;
-    }
-
-    body {
-      background-color: #f4f4f4;
-      color: #333;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 1rem;
-    }
-
-    header {
-      width: 100%;
-      max-width: 1000px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
-    }
-
-    header img {
-      height: 50px;
-    }
-
-    nav {
-      display: flex;
-      gap: 15px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #4CAF50;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #388E3C;
-    }
-
-    .contato {
-      background-color: #fff;
-      width: 100%;
-      max-width: 800px;
-      padding: 2rem;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      border-radius: 15px;
-      text-align: center;
-    }
-
-    .logo {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      height: 3rem;
-      width: auto;
-    }
-
-    .titulo {
-      font-size: 2rem;
-      font-weight: bold;
-      margin-top: 2.5rem;
-    }
-
-    .decorativo {
-      height: 10px;
-      background-color: #ddd;
-      border-radius: 5px;
-      margin: 1.5rem 0;
-    }
-
-    .descricao {
-      font-size: 1.125rem;
-      color: #555;
-      line-height: 1.8;
-      max-width: 700px;
-      margin: 0 auto 2rem auto;
-    }
-
-    .imagem-central {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-      margin: 0 auto 2rem auto;
-      display: block;
-      border-radius: 15px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .voltar {
-      background-color: #4CAF50;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      font-weight: bold;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    .voltar:hover {
-      background-color: #45a049;
-      transform: translateY(-2px);
-    }
-
-    .voltar:focus {
-      outline: none;
-      box-shadow: 0 0 10px rgba(72, 165, 72, 0.7);
-    }
-
-    @media (max-width: 768px) {
-      .titulo {
-        font-size: 1.5rem;
-      }
-
-      .descricao {
-        font-size: 1rem;
-      }
-
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-      }
-
-      .logo {
-        height: 2.5rem;
-      }
-
-      .voltar {
-        font-size: 0.95rem;
-        padding: 0.6rem 1.2rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .titulo {
-        font-size: 1.25rem;
-      }
-
-      .descricao {
-        font-size: 0.95rem;
-      }
-
-      .imagem-central {
-        width: 90%;
-      }
-
-      .voltar {
-        width: 100%;
-        padding: 0.8rem;
-      }
-    }
-
-    @media (max-width: 360px) {
-      .descricao {
-        font-size: 0.85rem;
-      }
-
-      .titulo {
-        font-size: 1.1rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato | Plataforma de Cursos</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-  <!-- Cabeçalho com logo e navegação -->
-  <header>
-    <img src="image-120.png" alt="Logo do Aplicativo">
-    <nav>
-      <a href="Cadastrar.html">Perfil</a>
-      <a href="Home.html">Home</a>
-      <a href="IA.html">Cursos</a>
-      <a href="lp.html">Notícias</a>
-      <a href="Contato.html">Contato</a>
-      <a href="Configuracao.html">Status</a>
-    </nav>
+  <header class="site-header">
+    <div class="container">
+      <img src="../img/image-120.png" alt="Logo da Plataforma de Cursos" />
+      <nav aria-label="Navegação principal">
+        <ul>
+          <li><a href="Cadastrar.html">Perfil</a></li>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="IA.html">Cursos</a></li>
+          <li><a href="TI.html">Notícias</a></li>
+          <li><a href="Contato.html" class="active">Contato</a></li>
+          <li><a href="Configuracao.html">Status</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <div class="contato">
-    <div class="titulo">Contato</div>
-    <div class="decorativo"></div>
+  <main class="contact-page">
+    <div class="contact-card">
+      <h1>Entre em Contato</h1>
+      
+      <p class="description">
+        Estamos aqui para ajudar! Se você tem dúvidas sobre as cerimônias de formatura, precisa de informações adicionais sobre os cursos ou quer compartilhar sua história de sucesso, nossa equipe está pronta para atendê-lo.
+      </p>
 
-    <div class="descricao">
-      Estamos aqui para ajudar! Se você tem dúvidas sobre as cerimônias de formatura, precisa de informações adicionais sobre os cursos ou quer compartilhar sua história de sucesso, nossa equipe está pronta para atendê-lo.
+      <img class="contact-image" src="../img/image-170.png" alt="Equipe de suporte sorrindo e pronta para ajudar.">
+
+      <button id="back-button" class="button-primary">Voltar</button>
     </div>
+  </main>
 
-    <img class="imagem-central" src="image-170.png" alt="Imagem de Contato">
-
-    <button class="voltar" onclick="window.history.back();">Voltar</button>
-  </div>
- <!-- Menu Acessibilidade -->
-  <div id="accessibility-menu" role="region" aria-label="Menu de acessibilidade" tabindex="0">
+  <div id="accessibility-menu" role="toolbar" aria-label="Menu de acessibilidade">
     <button id="increase-font" aria-label="Aumentar tamanho da fonte">A+</button>
     <button id="decrease-font" aria-label="Diminuir tamanho da fonte">A-</button>
-    <button id="reset-font" aria-label="Restaurar tamanho da fonte padrão">Reset</button>
-    <button id="toggle-contrast" aria-label="Alternar alto contraste">Contraste</button>
+    <button id="reset-font" aria-label="Restaurar tamanho da fonte padrão">A=</button>
     <button id="toggle-darkmode" aria-label="Alternar modo escuro">Modo Escuro</button>
+    <button id="toggle-contrast" aria-label="Alternar alto contraste">Contraste</button>
   </div>
 
-  <!-- VLibras -->
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
@@ -227,55 +59,6 @@
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
 
-  <script>
-    let fontSize = 16; // tamanho padrão em px
-    const minFontSize = 12;
-    const maxFontSize = 30;
-
-    function updateFontSize() {
-      document.documentElement.style.fontSize = fontSize + 'px';
-    }
-
-    document.getElementById('increase-font').addEventListener('click', () => {
-      if(fontSize < maxFontSize) {
-        fontSize++;
-        updateFontSize();
-      }
-    });
-
-    document.getElementById('decrease-font').addEventListener('click', () => {
-      if(fontSize > minFontSize) {
-        fontSize--;
-        updateFontSize();
-      }
-    });
-
-    document.getElementById('reset-font').addEventListener('click', () => {
-      fontSize = 16;
-      updateFontSize();
-    });
-
-    document.getElementById('toggle-contrast').addEventListener('click', () => {
-      document.body.classList.toggle('high-contrast');
-    });
-
-    document.getElementById('toggle-darkmode').addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-    });
-
-    const backToTopBtn = document.getElementById('back-to-top');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTopBtn.classList.add('show');
-      } else {
-        backToTopBtn.classList.remove('show');
-      }
-    });
-
-    backToTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
+  <script src="../js/contato.js" defer></script>
 </body>
 </html>

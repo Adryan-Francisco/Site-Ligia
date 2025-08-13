@@ -1,222 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Configurações do Usuário</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    body {
-      background-color: #f4f4f4;
-      padding: 20px;
-      color: #333;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 30px;
-    }
-
-    header img {
-      height: 50px;
-    }
-
-    /* Alinhar os links da navbar à direita */
-    nav {
-      display: flex;
-      gap: 15px;
-      margin-left: auto; /* Garante que o menu fique à direita */
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #4CAF50;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #388E3C;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 2rem;
-    }
-
-    .section {
-      margin-bottom: 30px;
-    }
-
-    .section h2 {
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      border-bottom: 2px solid #4CAF50;
-      padding-bottom: 5px;
-    }
-
-    .info {
-      background-color: #e8f5e9;
-      padding: 15px;
-      border-radius: 8px;
-    }
-
-    .info p {
-      margin: 8px 0;
-    }
-
-    .courses ul {
-      list-style: disc;
-      margin-left: 20px;
-      padding-left: 10px;
-    }
-
-    input[type="password"],
-    input[type="email"],
-    button {
-      width: 100%;
-      padding: 10px;
-      margin-top: 8px;
-      margin-bottom: 15px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-
-    button {
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #45a049;
-    }
-
-    .back-home {
-      background-color: #008CBA;
-      color: white;
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-      display: block;
-      width: 100%;
-      text-align: center;
-      margin-top: 20px;
-      transition: background-color 0.3s ease;
-    }
-
-    .back-home:hover {
-      background-color: #007B9E;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        flex-direction: column;
-        gap: 10px;
-        margin-left: 0; /* Remove margem esquerda em telas pequenas */
-      }
-
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      .section h2 {
-        font-size: 1.1rem;
-      }
-
-      input, button {
-        font-size: 0.95rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Configurações do Usuário | Plataforma de Cursos</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-  <header>
-    <img src="image-120.png" alt="Logo do Aplicativo">
-    <nav>
-      <a href="Cadastrar.html">Perfil</a>
-      <a href="Home.html">Home</a>
-      <a href="IA.html">Cursos</a>
-      <a href="lp.html">Notícias</a>
-      <a href="Contato.html">Contato</a>
-      <a href="Configuracao.html">Status</a>
-    </nav>
+  <header class="site-header">
+    <div class="container">
+      <img src="../img/image-120.png" alt="Logo da Plataforma de Cursos" />
+      <nav aria-label="Navegação principal">
+        <ul>
+          <li><a href="Cadastrar.html">Perfil</a></li>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="IA.html">Cursos</a></li>
+          <li><a href="TI.html">Notícias</a></li>
+          <li><a href="Contato.html">Contato</a></li>
+          <li><a href="Configuracao.html" class="active">Status</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <div class="container">
-    <h1>Configurações da Conta</h1>
+  <main class="user-dashboard">
+    <div class="container">
+      <h1>Configurações da Conta</h1>
 
-    <!-- Informações do usuário -->
-    <div class="section">
-      <h2>Dados do Usuário</h2>
-      <div class="info">
-        <p><strong>Nome:</strong> Adryan Thiago de Oliveira Francisco </p>
-        <p><strong>Email:</strong> adryan.francisco@fatec.sp.gov.br</p>
-        <p><strong>Status:</strong> Ativo</p>
-      </div>
+      <section class="dashboard-section" aria-labelledby="user-data-heading">
+        <h2 id="user-data-heading">Dados do Usuário</h2>
+        <div class="info-box">
+          <p><strong>Nome:</strong> Adryan Thiago de Oliveira Francisco</p>
+          <p><strong>Email:</strong> adryan.francisco@fatec.sp.gov.br</p>
+          <p><strong>Status da Conta:</strong> <span class="status-active">Ativo</span></p>
+        </div>
+      </section>
+
+      <section class="dashboard-section" aria-labelledby="user-courses-heading">
+        <h2 id="user-courses-heading">Cursos em Andamento</h2>
+        <ul class="course-list">
+          <li>Lógica de Programação</li>
+          <li>Desenvolvimento Web</li>
+          <li>Banco de Dados Básico</li>
+        </ul>
+      </section>
+
+      <section class="dashboard-section" aria-labelledby="password-reset-heading">
+        <h2 id="password-reset-heading">Redefinir Senha</h2>
+        <form id="password-reset-form" novalidate>
+          <div class="form-group">
+            <label for="new-password">Nova Senha</label>
+            <input type="password" id="new-password" placeholder="Digite a nova senha" required minlength="8" autocomplete="new-password">
+            <span class="error-message" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="confirm-password">Confirme a Nova Senha</label>
+            <input type="password" id="confirm-password" placeholder="Repita a nova senha" required autocomplete="new-password">
+            <span class="error-message" aria-live="polite"></span>
+          </div>
+          <button type="submit" class="button-primary">Atualizar Senha</button>
+        </form>
+      </section>
+      
+      <a href="Home.html" class="button-secondary">Voltar para a Página Inicial</a>
     </div>
+  </main>
 
-    <!-- Cursos em andamento -->
-    <div class="section courses">
-      <h2>Cursos em andamento</h2>
-      <ul>
-        <li>Lógica de Programação</li>
-        <li>Desenvolvimento Web</li>
-        <li>Banco de Dados Básico</li>
-      </ul>
-    </div>
-
-    <!-- Redefinir senha -->
-    <div class="section">
-      <h2>Redefinir Senha</h2>
-      <form onsubmit="event.preventDefault(); alert('Senha redefinida com sucesso!');">
-        <input type="password" placeholder="Nova senha" required />
-        <input type="password" placeholder="Confirme a nova senha" required />
-        <button type="submit">Atualizar Senha</button>
-      </form>
-    </div>
-
-    <!-- Botão de Voltar para a Página Inicial -->
-    <button class="back-home" onclick="window.location.href='Home.html';">Voltar para a Página Inicial</button>
-  </div>
- <!-- Menu Acessibilidade -->
-  <div id="accessibility-menu" role="region" aria-label="Menu de acessibilidade" tabindex="0">
+  <div id="accessibility-menu" role="toolbar" aria-label="Menu de acessibilidade">
     <button id="increase-font" aria-label="Aumentar tamanho da fonte">A+</button>
     <button id="decrease-font" aria-label="Diminuir tamanho da fonte">A-</button>
-    <button id="reset-font" aria-label="Restaurar tamanho da fonte padrão">Reset</button>
-    <button id="toggle-contrast" aria-label="Alternar alto contraste">Contraste</button>
+    <button id="reset-font" aria-label="Restaurar tamanho da fonte padrão">A=</button>
     <button id="toggle-darkmode" aria-label="Alternar modo escuro">Modo Escuro</button>
+    <button id="toggle-contrast" aria-label="Alternar alto contraste">Contraste</button>
   </div>
 
-  <!-- VLibras -->
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
@@ -228,55 +87,6 @@
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
 
-  <script>
-    let fontSize = 16; // tamanho padrão em px
-    const minFontSize = 12;
-    const maxFontSize = 30;
-
-    function updateFontSize() {
-      document.documentElement.style.fontSize = fontSize + 'px';
-    }
-
-    document.getElementById('increase-font').addEventListener('click', () => {
-      if(fontSize < maxFontSize) {
-        fontSize++;
-        updateFontSize();
-      }
-    });
-
-    document.getElementById('decrease-font').addEventListener('click', () => {
-      if(fontSize > minFontSize) {
-        fontSize--;
-        updateFontSize();
-      }
-    });
-
-    document.getElementById('reset-font').addEventListener('click', () => {
-      fontSize = 16;
-      updateFontSize();
-    });
-
-    document.getElementById('toggle-contrast').addEventListener('click', () => {
-      document.body.classList.toggle('high-contrast');
-    });
-
-    document.getElementById('toggle-darkmode').addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-    });
-
-    const backToTopBtn = document.getElementById('back-to-top');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTopBtn.classList.add('show');
-      } else {
-        backToTopBtn.classList.remove('show');
-      }
-    });
-
-    backToTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
+  <script src="../js/configuracao.js" defer></script>
 </body>
 </html>

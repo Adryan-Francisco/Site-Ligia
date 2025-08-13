@@ -3,14 +3,14 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /**
-   * INICIALIZA VALIDAÇÃO DO FORMULÁRIO DE LOGIN
+   * INICIALIZA FORMULÁRIO DE REDEFINIÇÃO DE SENHA
    */
-  function initLoginForm() {
-    const form = document.getElementById('login-form');
+  function initPasswordForm() {
+    const form = document.getElementById('password-reset-form');
     if (!form) return;
 
-    const usernameInput = document.getElementById('username');
-    const passwordInput = document.getElementById('password');
+    const newPasswordInput = document.getElementById('new-password');
+    const confirmPasswordInput = document.getElementById('confirm-password');
 
     function showError(input, message) {
       const formGroup = input.parentElement;
@@ -26,50 +26,47 @@ document.addEventListener('DOMContentLoaded', () => {
       errorDisplay.textContent = '';
     }
 
-    function validateForm() {
+    function validatePasswordForm() {
       let isValid = true;
-      clearError(usernameInput);
-      clearError(passwordInput);
+      clearError(newPasswordInput);
+      clearError(confirmPasswordInput);
 
-      if (usernameInput.value.trim() === '') {
-        showError(usernameInput, 'Por favor, informe seu nome de usuário.');
+      if (newPasswordInput.value.length < 8) {
+        showError(newPasswordInput, 'A nova senha deve ter no mínimo 8 caracteres.');
         isValid = false;
       }
 
-      if (passwordInput.value.trim() === '') {
-        showError(passwordInput, 'Por favor, informe sua senha.');
+      if (newPasswordInput.value !== confirmPasswordInput.value) {
+        showError(confirmPasswordInput, 'As senhas não coincidem.');
         isValid = false;
       }
-
+      
       return isValid;
     }
 
     form.addEventListener('submit', (event) => {
       event.preventDefault();
-      if (validateForm()) {
-        console.log('Formulário válido! Tentando fazer login...');
-        alert('Login enviado com sucesso! (Simulação)');
-        // form.submit(); // Em um site real, você descomentaria esta linha para enviar os dados.
-      } else {
-        console.log('Formulário inválido.');
+      if (validatePasswordForm()) {
+        alert('Senha atualizada com sucesso! (Simulação)');
+        form.reset(); // Limpa o formulário após o sucesso
       }
     });
   }
 
-
   /**
-   * INICIALIZA CONTROLES DE ACESSIBILIDADE (pode ser um script global)
+   * INICIALIZA CONTROLES DE ACESSIBILIDADE
+   * (Poderia ser um script global importado em todas as páginas)
    */
   function initAccessibility() {
     const body = document.body;
     const htmlEl = document.documentElement;
     const increaseFontBtn = document.getElementById('increase-font');
+    if (!increaseFontBtn) return; // Sai se o menu não existir
+
     const decreaseFontBtn = document.getElementById('decrease-font');
     const resetFontBtn = document.getElementById('reset-font');
     const toggleContrastBtn = document.getElementById('toggle-contrast');
     const toggleDarkModeBtn = document.getElementById('toggle-darkmode');
-    
-    if (!increaseFontBtn) return; // Se não houver menu, não faz nada
     
     const FONT_STEP = 1, MIN_FONT_SIZE = 12, MAX_FONT_SIZE = 24, DEFAULT_FONT_SIZE = 16;
     const getCurrentFontSize = () => parseFloat(getComputedStyle(htmlEl).fontSize);
@@ -91,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleContrastBtn.addEventListener('click', () => body.classList.toggle('high-contrast'));
     toggleDarkModeBtn.addEventListener('click', () => body.classList.toggle('dark-mode'));
   }
-    /**
+  /**
    * Inicializa o botão "Voltar ao Topo".
    */
   function initBackToTop() {
@@ -112,8 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-  // --- Inicialização de todas as funções da página ---
-  initLoginForm();
+  // --- Inicialização ---
+  initPasswordForm();
   initAccessibility();
-
-});
+});s
