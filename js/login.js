@@ -47,9 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', (event) => {
       event.preventDefault();
       if (validateForm()) {
-        console.log('Formulário válido! Tentando fazer login...');
-        alert('Login enviado com sucesso! (Simulação)');
-        // form.submit(); // Em um site real, você descomentaria esta linha para enviar os dados.
+        console.log('Formulário válido! Redirecionando para a home...');
+        
+        // Redireciona o usuário para a página Home.html
+        window.location.href = 'Home.html';
+
       } else {
         console.log('Formulário inválido.');
       }
@@ -64,12 +66,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
     const htmlEl = document.documentElement;
     const increaseFontBtn = document.getElementById('increase-font');
+    if (!increaseFontBtn) return; // Se não houver menu, não faz nada
+    
     const decreaseFontBtn = document.getElementById('decrease-font');
     const resetFontBtn = document.getElementById('reset-font');
     const toggleContrastBtn = document.getElementById('toggle-contrast');
     const toggleDarkModeBtn = document.getElementById('toggle-darkmode');
-    
-    if (!increaseFontBtn) return; // Se não houver menu, não faz nada
     
     const FONT_STEP = 1, MIN_FONT_SIZE = 12, MAX_FONT_SIZE = 24, DEFAULT_FONT_SIZE = 16;
     const getCurrentFontSize = () => parseFloat(getComputedStyle(htmlEl).fontSize);
@@ -91,27 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleContrastBtn.addEventListener('click', () => body.classList.toggle('high-contrast'));
     toggleDarkModeBtn.addEventListener('click', () => body.classList.toggle('dark-mode'));
   }
-    /**
-   * Inicializa o botão "Voltar ao Topo".
-   */
-  function initBackToTop() {
-    if (!backToTopBtn) return;
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTopBtn.classList.add('show');
-      } else {
-        backToTopBtn.classList.remove('show');
-      }
-    });
-
-    backToTopBtn.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  }
+  
   // --- Inicialização de todas as funções da página ---
   initLoginForm();
   initAccessibility();

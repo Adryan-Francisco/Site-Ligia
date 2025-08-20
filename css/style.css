@@ -48,18 +48,18 @@ body.dark-mode {
 
 /* Tema Alto Contraste */
 body.high-contrast {
-  --color-text: yellow;
+  --color-text: rgb(255, 255, 255);
   --color-background: black;
   --color-surface: black;
-  --color-border: yellow;
-  --color-primary: yellow;
+  --color-border: rgb(255, 255, 255);
+  --color-primary: rgb(255, 255, 255);
   --color-primary-dark: #ffff99;
 }
 body.high-contrast a, body.high-contrast button {
-  border: 2px solid yellow;
+  border: 2px solid rgb(255, 255, 255);
 }
 body.high-contrast .card, body.high-contrast header {
-  border: 1px solid yellow;
+  border: 1px solid rgb(255, 255, 255);
 }
 
 /* ------------------------- */
@@ -684,4 +684,18 @@ img {
 .course-details-container .button-secondary {
     max-width: 250px;
     margin: var(--spacing-lg) auto 0 auto;
+}
+/* --- ADICIONAR AO FINAL DE css/style.css --- */
+
+/* ---------------------------------- */
+/* 10. CORREÇÃO VLIBRAS MOBILE        */
+/* ---------------------------------- */
+
+/* Este código garante que o botão do VLibras ('vw-access-button')
+  tenha uma prioridade de empilhamento (z-index) muito alta,
+  ficando na frente de outros elementos fixos, como o nosso 
+  menu de acessibilidade.
+*/
+div[vw-access-button] {
+  z-index: 9999 !important;
 }
