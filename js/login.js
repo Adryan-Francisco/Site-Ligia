@@ -94,6 +94,27 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleDarkModeBtn.addEventListener('click', () => body.classList.toggle('dark-mode'));
   }
   
+  /**
+   * Inicializa o botão "Voltar ao Topo".
+   */
+  function initBackToTop() {
+    if (!backToTopBtn) return;
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
   // --- Inicialização de todas as funções da página ---
   initLoginForm();
   initAccessibility();
